@@ -74,6 +74,7 @@ jobs:
         run: flatpak --version
 
       - name: Free up disk space
+        if: false
         run: |
           sudo swapoff -a || true
           sudo rm -rf /opt/ghc /usr/local/.ghcup || true

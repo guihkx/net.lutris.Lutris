@@ -1,0 +1,37 @@
+diff --git a/src/3rdparty/assimp/code/FIReader.hpp b/src/3rdparty/assimp/code/FIReader.hpp
+index 5f4e5bb48..18a5d561e 100644
+--- a/src/3rdparty/assimp/code/FIReader.hpp
++++ b/src/3rdparty/assimp/code/FIReader.hpp
+@@ -55,7 +55,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ #include <cwchar>
+ #include <vector>
+ //#include <stdio.h>
+-//#include <cstdint>
++#include <cstdint>
+ #include <irrXML.h>
+ 
+ namespace Assimp {
+diff --git a/src/3rdparty/assimp/code/MMDPmdParser.h b/src/3rdparty/assimp/code/MMDPmdParser.h
+index 586f20a5f..7baf6e93b 100644
+--- a/src/3rdparty/assimp/code/MMDPmdParser.h
++++ b/src/3rdparty/assimp/code/MMDPmdParser.h
+@@ -45,6 +45,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ #include <memory>
+ #include <iostream>
+ #include <fstream>
++#include <cstdint>
+ #include "MMDCpp14.h"
+ 
+ namespace pmd
+diff --git a/src/3rdparty/assimp/code/MMDPmxParser.h b/src/3rdparty/assimp/code/MMDPmxParser.h
+index 989cffed6..9156f2784 100644
+--- a/src/3rdparty/assimp/code/MMDPmxParser.h
++++ b/src/3rdparty/assimp/code/MMDPmxParser.h
+@@ -45,6 +45,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ #include <iostream>
+ #include <fstream>
+ #include <memory>
++#include <cstdint>
+ #include "MMDCpp14.h"
+ 
+ namespace pmx

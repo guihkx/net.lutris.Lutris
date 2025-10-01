@@ -146,3 +146,5 @@ modules:
         url: https://invent.kde.org/qt/qt/qt3d.git
         # HEAD as of 14/03/2022
         commit: cd8f66a15ed63ea80ca66ebe30f1a3fe75fb29eb
+      - type: patch
+        path: patches/qt3d-missing-header.patch

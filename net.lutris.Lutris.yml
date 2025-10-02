@@ -338,6 +338,7 @@ modules:
       - -DENABLE_STATIC:BOOL=NO
       - -DWITH_JPEG8:BOOL=YES
       - -DCMAKE_INSTALL_LIBDIR=/app/lib # uses lib64 by default
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources: &libjpeg_sources
       - type: archive
         url: https://github.com/libjpeg-turbo/libjpeg-turbo/archive/refs/tags/2.1.3.tar.gz
@@ -352,6 +353,7 @@ modules:
       - -DCMAKE_SKIP_RPATH:BOOL=YES
       - -DENABLE_STATIC:BOOL=NO
       - -DWITH_JPEG8:BOOL=YES
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources: *libjpeg_sources
 
   - name: libcurl-gnutls-hack

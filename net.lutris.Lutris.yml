@@ -416,6 +416,10 @@ modules:
 
   - name: mesa-demos
     buildsystem: simple
+    build-options:
+      arch:
+        x86_64:
+          prepend-pkg-config-path: /app/lib64/pkgconfig
     build-commands:
       - cat /app/lib/pkgconfig/glu.pc || exit 0
       - cat /app/lib64/pkgconfig/glu.pc || exit

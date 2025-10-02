@@ -415,15 +415,12 @@ modules:
         sha256: b560c678da6930a0da267304fa3a41cc5df39a96a5e23d06f14984c87b6f587b
 
   - name: mesa-demos
-    config-opts:
-      - --without-glut
-      - --bindir=/app/lib/mesa-demos
-    make-args:
-      - -C
-      - src/xdemos
-      - glxinfo
-    no-make-install: true
+    buildsystem: simple
     build-commands:
+      - cat /app/lib/pkgconfig/glu.pc || exit 0
+      - cat /app/lib64/pkgconfig/glu.pc || exit
+      - ./configure --without-glut --bindir=/app/lib/mesa-demos || cat config.log
+      - make -C src/xdemos glxinfo
       - install -D src/xdemos/glxinfo -t /app/bin/
     sources:
       - type: archive
